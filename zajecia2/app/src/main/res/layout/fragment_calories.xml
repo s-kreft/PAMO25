@@ -6,17 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".ui.calories.CaloriesFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
+    <EditText
+        android:id="@+id/editAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Wiek"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Waga (kg)"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wzrost (cm)"
+        android:inputType="numberDecimal" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinnerActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Twoje zapotrzebowanie kaloryczne:"
+        android:textSize="18sp"
+        android:padding="10dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,17 +6,172 @@
     android:layout_height="match_parent"
     tools:context=".ui.benedict.BenedictFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/heightEditText"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="34dp"
+        android:digits="0123456789."
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightEditText" />
+
+    <EditText
+        android:id="@+id/AgeEditText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="62dp"
+        android:digits="0123456789."
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/heightTextView"
+        app:layout_constraintTop_toBottomOf="@+id/switchLabelWoman" />
+
+    <TextView
+        android:id="@+id/AgeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="28dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:text="Height: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toStartOf="@+id/heightEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightTextView" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:digits="0123456789."
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/bmiTextView"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="584dp"
+        android:background="@color/colorAccent"
+        android:elevation="@dimen/elevation"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="204dp"
+        android:layout_marginBottom="289dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:text="Age:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toStartOf="@+id/heightEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightTextView" />
+
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="112dp"
+        android:background="@color/colorPrimary"
+        android:elevation="@dimen/elevation"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:text="Weight: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toStartOf="@+id/weightEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switchGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:text="Switch"
+        app:layout_constraintBottom_toTopOf="@+id/AgeEditText"
+        app:layout_constraintEnd_toStartOf="@+id/switchLabelWoman"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/switchLabelMan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:text="Man"
+        app:layout_constraintEnd_toStartOf="@+id/switchGender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AgeTextView" />
+
+    <TextView
+        android:id="@+id/switchLabelWoman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="60dp"
+        android:text="Woman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightEditText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Kalorie"
+        app:layout_constraintBottom_toTopOf="@+id/bmiTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerActivity"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AgeEditText" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oblicz"
+        app:layout_constraintBottom_toTopOf="@+id/bmiTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
