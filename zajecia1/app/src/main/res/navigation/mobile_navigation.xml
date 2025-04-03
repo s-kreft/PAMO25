@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_benedict">
+
+
+    <fragment
+        android:id="@+id/navigation_benedict"
+        android:name="com.example.bmiapp.ui.benedict.BenedictFragment"
+        android:label="@string/title_benedict"
+        tools:layout="@layout/fragment_benedict" />
+
+    <fragment
+        android:id="@+id/navigation_bmi"
+        android:name="com.example.bmiapp.ui.bmi.BMIFragment"
+        android:label="@string/title_bmi"
+        tools:layout="@layout/activity_bmi" />
+
+    <fragment
+        android:id="@+id/navigation_calories"
+        android:name="com.example.bmiapp.ui.calories.CaloriesFragment"
+        android:label="@string/title_calories"
+        tools:layout="@layout/fragment_calories" />
+</navigation>

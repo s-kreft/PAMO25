@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_bmi"
+        android:icon="@drawable/ic_bmi_black_24dp"
+        android:title="@string/title_bmi" />
+
+    <item
+        android:id="@+id/navigation_benedict"
+        android:icon="@drawable/ic_benedict_black_24dp"
+        android:title="@string/title_benedict" />
+
+    <item
+        android:id="@+id/navigation_calories"
+        android:icon="@drawable/ic_calories_black_24dp"
+        android:title="@string/title_calories" />
+
+</menu>
