@@ -3,4 +3,7 @@
     <string name="title_benedict">Benedict</string>
     <string name="title_bmi">BMI</string>
     <string name="title_calories">Calories</string>
+    <string name="haight_desc">Podaj wzrost</string>
+    <string name="weight_desc">Podaj wagę</string>
+    <string name="calculate">Oblicz</string>
 </resources>

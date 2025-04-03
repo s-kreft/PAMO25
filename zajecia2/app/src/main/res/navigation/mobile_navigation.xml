@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_bmi">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.bmiapp.ui.bmi.BmiFragment"
-        android:label="@string/title_benedict"
-        tools:layout="@layout/fragment_bmi" />
-
-    <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_benedict"
         android:name="com.example.bmiapp.ui.benedict.BenedictFragment"
-        android:label="@string/title_bmi"
+        android:label="@string/title_benedict"
         tools:layout="@layout/fragment_benedict" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_bmi"
+        android:name="com.example.bmiapp.ui.bmi.BmiFragment"
+        android:label="@string/title_bmi"
+        tools:layout="@layout/fragment_bmi" />
+
+    <fragment
+        android:id="@+id/navigation_calories"
         android:name="com.example.bmiapp.ui.calories.CaloriesFragment"
         android:label="@string/title_calories"
         tools:layout="@layout/fragment_calories" />
