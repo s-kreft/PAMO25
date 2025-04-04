@@ -28,6 +28,7 @@ public class BenedictFragment extends Fragment {
 
     private FragmentBenedictBinding binding;
     private TextView bmiTextView;
+    public static double bmi =0;
 
     private static final NumberFormat numberFormat =
             NumberFormat.getNumberInstance();
@@ -42,6 +43,7 @@ public class BenedictFragment extends Fragment {
     private Button btnCalculate;
 
     private Boolean isWoman = true;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -125,6 +127,7 @@ public class BenedictFragment extends Fragment {
             }
 
             bmi = bmi * activityMultiplier;
+            BenedictFragment.bmi = bmi;
             bmiTextView.setText(numberFormat.format(bmi));
         }
     }
