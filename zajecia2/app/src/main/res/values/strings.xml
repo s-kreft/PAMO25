@@ -6,6 +6,9 @@
     <string name="haight_desc">Podaj wzrost</string>
     <string name="weight_desc">Podaj wagę</string>
     <string name="calculate">Oblicz</string>
+    <string name="calories">Kalorie</string>
+    <string name="man">Mężczyzna</string>
+    <string name="woman">Kobieta</string>
     <string-array name="activity_array">
         <item>Niska aktywność</item>
         <item>Średnia aktywność</item>
