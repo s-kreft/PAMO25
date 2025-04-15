@@ -59,14 +59,14 @@ public class BmiFragment extends Fragment {
             public void onClick(View view) {
                 heightValue = Double.parseDouble(haightInput.getText().toString());
                 weightValue = Double.parseDouble(weightInput.getText().toString());
-                calculateBMI();
+                calculateBMI(heightValue, weightValue);
                 bmiTextValue.setText("BMI: " + df.format(bmiValue));
                 bmiTextStatus.setText(bmiStatus);
             }
         });
     }
-    private void calculateBMI() {
-        bmiValue = (weightValue / Math.pow(heightValue, 2));
+    public String calculateBMI(double weight, double height) {
+        bmiValue = (weight / Math.pow(height, 2));
         if(bmiValue < 18.5) {
             bmiStatus = "NIEDOWAGA";
         } else if (bmiValue >= 18.5 & bmiValue < 24.99) {
@@ -76,5 +76,6 @@ public class BmiFragment extends Fragment {
         } else if (bmiValue >= 30) {
             bmiStatus = "OTYŁOŚĆ";
         }
+        return bmiStatus;
     }
 }
