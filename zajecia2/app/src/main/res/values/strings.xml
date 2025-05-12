@@ -9,6 +9,7 @@
     <string name="calories">Kalorie</string>
     <string name="man">Mężczyzna</string>
     <string name="woman">Kobieta</string>
+    <string name="makaron_ze_szparagami">Makaron ze Szparagami</string>
     <string-array name="activity_array">
         <item>Niska aktywność</item>
         <item>Średnia aktywność</item>

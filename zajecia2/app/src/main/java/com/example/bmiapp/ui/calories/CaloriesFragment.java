@@ -173,10 +173,12 @@ public class CaloriesFragment extends Fragment {
         recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         shoppingList = new ArrayList<>();
-        shoppingList.add(new ShoppingItem("Milk"));
-        shoppingList.add(new ShoppingItem("Bread"));
-        shoppingList.add(new ShoppingItem("Eggs"));
-        shoppingList.add(new ShoppingItem("Butter"));
+        shoppingList.add(new ShoppingItem("Szparagi"));
+        shoppingList.add(new ShoppingItem("Makaron spaghetti"));
+        shoppingList.add(new ShoppingItem("Czosnek"));
+        shoppingList.add(new ShoppingItem("Oliwa"));
+        shoppingList.add(new ShoppingItem("Cytryna"));
+        shoppingList.add(new ShoppingItem("Natka pietruszki"));
 
         adapter = new ShoppingAdapter(shoppingList);
         recyclerView.setAdapter(adapter);
