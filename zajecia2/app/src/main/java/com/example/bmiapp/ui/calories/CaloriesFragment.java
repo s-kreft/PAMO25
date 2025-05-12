@@ -10,11 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bmiapp.R;
 import com.example.bmiapp.databinding.FragmentCaloriesBinding;
 import com.example.bmiapp.ui.benedict.BenedictFragment;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class CaloriesFragment extends Fragment {
@@ -24,6 +28,11 @@ public class CaloriesFragment extends Fragment {
 
     private TextView recipeTextView;
     private TextView bmiTextView;
+
+    private RecyclerView recyclerView;
+    private ShoppingAdapter adapter;
+    private List<ShoppingItem> shoppingList;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -160,6 +169,17 @@ public class CaloriesFragment extends Fragment {
         } else if (kcalValue >= 2000) {
             recipeNumber = 4;
         }
+
+        recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        shoppingList = new ArrayList<>();
+        shoppingList.add(new ShoppingItem("Milk"));
+        shoppingList.add(new ShoppingItem("Bread"));
+        shoppingList.add(new ShoppingItem("Eggs"));
+        shoppingList.add(new ShoppingItem("Butter"));
+
+        adapter = new ShoppingAdapter(shoppingList);
+        recyclerView.setAdapter(adapter);
 //        int randomRecipe = ThreadLocalRandom.current().nextInt(recipes.length);
         var textView = (TextView) getView().findViewById(R.id.text_recipe);
         textView.setText(recipes[recipeNumber]);
